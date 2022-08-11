@@ -27,7 +27,7 @@ A+B -4
 		17
 		7
 		
-sc.hasNextInt() -> 입력값이 int형일경우 true
+
 /**/
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class c12_AplusB{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a,b;
-		while(sc.hasNextInt()) {
+		while(sc.hasNextInt()) {//sc.hasNextInt() -> 입력값이 int형일경우 true
 			a = sc.nextInt();
 			b = sc.nextInt();
 			System.out.println(a+b);

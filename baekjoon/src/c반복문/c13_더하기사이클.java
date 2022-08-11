@@ -36,37 +36,28 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작성하시오.
 
 예제 출력5 12
 /**/
+//26부터 시작한다. 2+6 = 8이다. 새로운 수는 68이다. 6+8 = 14이다. 새로운 수는 84이다. 8+4 = 12이다. 새로운 수는 42이다. 4+2 = 6이다. 새로운 수는 26이다.
 import java.util.Scanner;
-
 public class c13_더하기사이클{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n,a,b,c;
-		int x = 1,y=0;
+		int n,nn,a,b,c;
+		int cnt=0;
+		
 		n = sc.nextInt();
-		
-		if(n<10) { //10보다 작으면 0붙여줌
-			n = n*10;
+		nn = n;
+		while(true) {
+			a = n/10; //2 ->6 ->8 -> 4
+			b = n%10; //6 ->8 -> 4 -> 2
+			c = a + b; //8 -> 14 -> 12 -> 6
+			n = b*10 + c%10;//68 ->84 ->42 -> 26
+			cnt++;
+			System.out.println(n);
+			if(nn==n) {
+				break;
+			}
 		}
-		//55
-		a = n/10;//5
-		b = n%10;//5
-		y = a + b;//10
-		c = b*10+y;//
-		
-		
-		while(n!=c) {
-			
-			a = c/10; //6
-			b = c%10; //8
-			y = a + b; //14
-			if(y>10) {
-				y = y%10;//4
-			}
-			c = b*10+y;
-			x++;
-			}
-		System.out.println(x);
+		System.out.println(cnt);
 		}
 		
 }
