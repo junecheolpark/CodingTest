@@ -12,6 +12,7 @@ public class 새로운기술 {
  *  -d04
  *  //HashSet : 중복을 걸러줌
 	HashSet<Integer> set = new HashSet<Integer>();
- */
+
+	e_03 문제차체를 이해못함
 /**/
 }

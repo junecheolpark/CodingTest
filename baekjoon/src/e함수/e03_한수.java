@@ -4,36 +4,55 @@ package e함수;
 평균은 넘겠지
 
 문제
-대학생 새내기들의 90%는 자신이 반에서 평균은 넘는다고 생각한다. 당신은 그들에게 슬픈 진실을 알려줘야 한다.
+어떤 양의 정수 X의 각 자리가 등차수열을 이룬다면, 그 수를 한수라고 한다. 등차수열은 연속된 두 개의 수의 차이가 일정한 수열을 말한다. 
+N이 주어졌을 때, 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력하는 프로그램을 작성하시오. 
 
 입력
-첫째 줄에는 테스트 케이스의 개수 C가 주어진다.
-
-둘째 줄부터 각 테스트 케이스마다 학생의 수 N(1 ≤ N ≤ 1000, N은 정수)이 첫 수로 주어지고, 이어서 N명의 점수가 주어진다. 
-점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
+첫째 줄에 1,000보다 작거나 같은 자연수 N이 주어진다.
 
 출력
-각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
+첫째 줄에 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력한다.
 
-예제 입력1 5
-		5 50 50 70 80 100
-		7 100 95 90 80 70 60 50
-		3 70 90 80
-		3 70 90 81
-		9 100 99 98 97 96 95 94 93 91
+예제 입력1 110
 
-예제 출력1 40.000%
-		57.143%
-		33.333%
-		66.667%
-		55.556%
+예제 출력1 99
 /**/
 import java.util.Scanner;
+
 public class e03_한수 {
+ 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		
-			
-		}
+		System.out.print(arithmetic_sequence(in.nextInt()));
+		in.close();
+ 
+		
 	}
+ 
+	public static int arithmetic_sequence(int num) {
+		int cnt = 0; // 한수 카운팅
+ 
+		if (num < 100) {
+			return num;
+		}
+ 
+		else {
+			cnt = 99;
+ 
+			for (int i = 100; i <= num; i++) {
+				int hun = i / 100; // 백의 자릿수
+				int ten = (i / 10) % 10; // 십의 자릿수
+				int one = i % 10;
+ 
+				if ((hun - ten) == (ten - one)) { // 각 자릿수가 수열을 이루면
+					cnt++;
+				}
+			}
+		}
+ 
+		return cnt;
+	}
+ 
+}
 
