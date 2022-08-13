@@ -1,40 +1,47 @@
 package f문자열;
 
-
 /*/
-평균은 넘겠지
+문자열 반복
 
 문제
-대학생 새내기들의 90%는 자신이 반에서 평균은 넘는다고 생각한다. 당신은 그들에게 슬픈 진실을 알려줘야 한다.
+문자열 S를 입력받은 후에, 각 문자를 R번 반복해 새 문자열 P를 만든 후 출력하는 프로그램을 작성하시오. 즉, 첫 번째 문자를 R번 반복하고,
+ 두 번째 문자를 R번 반복하는 식으로 P를 만들면 된다. S에는 QR Code "alphanumeric" 문자만 들어있다.
+
+QR Code "alphanumeric" 문자는 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\$%*+-./: 이다.
 
 입력
-첫째 줄에는 테스트 케이스의 개수 C가 주어진다.
-
-둘째 줄부터 각 테스트 케이스마다 학생의 수 N(1 ≤ N ≤ 1000, N은 정수)이 첫 수로 주어지고, 이어서 N명의 점수가 주어진다. 
-점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
+첫째 줄에 테스트 케이스의 개수 T(1 ≤ T ≤ 1,000)가 주어진다. 각 테스트 케이스는 반복 횟수 R(1 ≤ R ≤ 8), 문자열 S가 공백으로 
+구분되어 주어진다. S의 길이는 적어도 1이며, 20글자를 넘지 않는다. 
 
 출력
-각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
+각 테스트 케이스에 대해 P를 출력한다.
 
-예제 입력1 5
-		5 50 50 70 80 100
-		7 100 95 90 80 70 60 50
-		3 70 90 80
-		3 70 90 81
-		9 100 99 98 97 96 95 94 93 91
+예제 입력1 2
+3 ABC
+5 /HTP
 
-예제 출력1 40.000%
-		57.143%
-		33.333%
-		66.667%
-		55.556%
+예제 출력1 AAABBBCCC
+/////HHHHHTTTTTPPPPP
 /**/
 import java.util.Scanner;
+
 public class f04_문자열반복 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-			
+
+		int n = sc.nextInt();
+		for (int i = 0; i < n; i++) {// n번의 입력을 받음
+
+			int r = sc.nextInt();
+			String s = sc.next(); //nextLine() 오류남 
+
+			for (int j = 0; j < s.length(); j++) { // s문자길이만큼 반복하여 검색
+				for (int l = 0; l < r; l++) {
+					System.out.print(s.charAt(j));
+				}
+			}
+
+			System.out.println();
 		}
 	}
-
+}

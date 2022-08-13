@@ -24,20 +24,27 @@ import java.util.Scanner;
 public class f03_알파벳찾기 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 		String s = sc.nextLine();
-		String[] a = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"}; 
-			for (int i=0; i<a.length; i++) {
-				int num = -1;
-				for (int j=0; j<s.length(); j++) {
-					if(s.charAt(j)-'0' ==a[i].charAt(i)-'0') {
-						num=j;
-					}else {
-						num = -1;
-					}
-					System.out.print(num + " ");
-				}
+		
+		// a 배열 -1 설정
+		int[] a = new int[26]; 
+		for (int i=0; i<a.length; i++) {
+			a[i]=-1;				
+		}
+		
+		for (int j=0; j<s.length(); j++) {
+			int num = 0;
+			num = s.charAt(j)-'a';
+			
+			if(a[num]==-1) {
+				a[num]=j;
 			}
+			
+		}
+		
+		for(int val : a) {
+			System.out.print(val +" ");
+		}
 		}
 	}
 
