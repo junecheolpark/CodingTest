@@ -30,7 +30,7 @@ package g기본수학1;
 		55.556%
 /**/
 import java.util.Scanner;
-public class ㅇㅇ6 {
+public class ㅇㅇ7 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
