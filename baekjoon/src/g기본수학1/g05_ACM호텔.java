@@ -43,33 +43,31 @@ ACM 호텔 매니저 지우는 손님이 도착하는 대로 빈 방을 배정하고 있다. 고객 설문조사
 		1203
 /**/
 import java.util.Scanner;
-
 public class g05_ACM호텔 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 		int t, h, w, n;
 		t = sc.nextInt(); // 몇번
 	
 		for (int k = 0; k < t; k++) {
-			int cnt = 0;
+			int cnt = 0; // 배열 저장 카운트
 			int num = 101;
+			
 			h = sc.nextInt(); // 세로
 			w = sc.nextInt(); // 가로
 			n = sc.nextInt(); // 몇번째
+			
 			int[] arr = new int[h * w]; // 배열
 			
 			for (int i = 0; i < w; i++) {// 세로만큼 반복
-				int num2 = num;
+				int num2 = num; // 다음번에는 +1된 102가 됨
 				for (int j = 0; j < h; j++) { // 가로만큼 반복
-					//System.out.println(num2);
-					arr[cnt] = num2;
+					arr[cnt] = num2; // num2 값 배열에 저장
 					num2 = num2 + 100;
 					cnt++;
 				}
-				num = num + 1;
+				num = num + 1; 
 			}
-			//System.out.println(n);
 			System.out.println(arr[n - 1]);
 		}
 
