@@ -24,7 +24,7 @@ public class 성격유형검사 {
 			if (cntA == cntB)
 				sb.append(a);
 			else
-				sb.append(cntA > cntB ? a : b);
+				sb.append(cntA  > cntB ? a : b);
 		}
 		return sb.toString();
 	}
