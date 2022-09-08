@@ -46,13 +46,13 @@ public class e01_정수N개의합 {
 		for(int i=0; i<a.length; i++) {
 			a[i] = sc.nextInt();
 		}
-		System.out.println(a);
 		long b = new Test().sum(a);
 		System.out.println(b);
 		
 		}
 	}
 //함수
+/**/
 class Test{
 	long sum(int[] a) {
 		long sum = 0;
@@ -64,3 +64,4 @@ class Test{
 		
 	}
 }
+/**/
