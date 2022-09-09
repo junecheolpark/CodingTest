@@ -1,23 +1,24 @@
 import java.util.Scanner;
 
-public class a03_자릿수더하기 {
+public class a04_약수의합 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int answer = new Solution3().solution(n);
+		int answer = new Solution4().solution(n);
 		System.out.println(answer);
 
 	}
 
 }
 
-class Solution3 {
+class Solution4 {
 	public int solution(int n) {
 		int answer = 0;
-		while(n!=0) {// n 이 0이 아니라면
-			answer += n%10; //1의자리수를 구해 더해줌
-			n /= 10; // 10씩 나눠줌
-			System.out.println(answer);
+		for (int i = 1; i <= n; i++) {
+			if (n % i == 0) {
+				System.out.println(i);
+				answer += i;
+			}
 		}
 		return answer;
 	}
