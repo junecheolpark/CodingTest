@@ -14,10 +14,17 @@ public class a05_정수제곱근판별 {
 class Solution5 {
 	public long solution(int n) {
 		long answer = -1; //양의정수가 아니면 -1
+		/*
 		for (long i = 1; i <= n; i++) {//1~n까지 반복
 			if (i * i == n) {
 				answer = (i+1)*(i+1); // i*i==n 일경우 i+1의 제곱
 			}
+		}
+		*/
+		long sqrRt = (long) Math.sqrt(n);
+
+		if (sqrRt * sqrRt == n) {
+			return (sqrRt + 1) * (sqrRt + 1);
 		}
 		return answer;
 	}
