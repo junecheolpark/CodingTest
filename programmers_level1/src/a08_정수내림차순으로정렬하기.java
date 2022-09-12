@@ -10,13 +10,13 @@ public class a08_정수내림차순으로정렬하기 {
 		System.out.println(answer);
 
 	}
-
 }
 
 class Solution8 {
 	public long solution(long n) {
 		//118372	873211
-		/*/
+		/**/
+		//정렬함수 이용x
 		int tmp = 0;
 		char[] ch = String.valueOf(n).toCharArray(); //String 형변환 후 char배열로 저장
 		for(int i = 0; i<ch.length; i++) {
@@ -30,7 +30,9 @@ class Solution8 {
 		}
 		return Long.parseLong(String.valueOf(ch));// ch를 String형으로 변환후 Long형으로 변환
 		/**/
-		/**/
+		
+		/*/
+		//정렬함수이용
 		String[] arr = String.valueOf(n).split(""); // String형으로 변환후 하나씩 배열로 정의
 		Arrays.sort(arr,Collections.reverseOrder());// 내림차순으로 정렬
 		StringBuilder sb = new StringBuilder();
@@ -42,3 +44,4 @@ class Solution8 {
 		/**/
 	}
 }
+
