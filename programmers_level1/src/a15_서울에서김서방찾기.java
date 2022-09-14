@@ -15,9 +15,9 @@ public class a15_서울에서김서방찾기 {
 class Solution15 {
 	public String solution(String[] seoul) {
 		String answer = "";
-		for (int i = 0; i < seoul.length; i++) {
+		for (int i = 0; i < seoul.length; i++) { // seoul배열 길이값만큼 반복
 			if (seoul[i].equals("Kim")) {
-				answer = "김서방은 " + i + "에 있다";
+				answer = "김서방은 " + i + "에 있다"; // i번째 출력
 			}
 		}
 		return answer;
