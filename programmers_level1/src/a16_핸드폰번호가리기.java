@@ -15,9 +15,9 @@ public class a16_핸드폰번호가리기 {
 class Solution16 {
 	public String solution(String phone_number) {
         char[] ch = phone_number.toCharArray(); // 폰번호를 char배열로 저장
-        for(int i = 0; i<ch.length-4; i++) {
+        for(int i = 0; i<ch.length-4; i++) { // 폰번호 4자리를 제외한 *표시
         	ch[i] = '*';
         }
-        return String.valueOf(ch);
+        return String.valueOf(ch); // String형변환해주고 리턴
     }
 }
