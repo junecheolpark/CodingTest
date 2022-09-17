@@ -28,7 +28,7 @@ class Solution18 {
 		if (cnt < 1) { // cnt 1보다 작다면 -1 리턴
 			int[] answer = { -1 };
 			return answer;
-		} else { 
+		} else {
 			int[] answer = new int[cnt];
 			for (int i = 0; i < arr.length; i++) { // 같은 방법으로
 				if (arr[i] % divisor == 0) {
@@ -38,11 +38,13 @@ class Solution18 {
 			return answer;
 		}
 		/**/
-		/* 해석하기
-		int[] answer = Arrays.stream(arr).filter(factor -> factor % divisor == 0).toArray();
-        if(answer.length == 0) answer = new int[] {-1};
-        Arrays.sort(answer);
-        return answer;
-        /**/
+
+		/*/해석하기
+		if (answer.length == 0)
+			answer = new int[] { -1 };
+		int[] answer = Arrays.stream(arr).filter(factor -> factor % divisor == 0).toArray(); // arr 반복시켜 filter을 통해 걸러주는 람다식 방법도 있다
+		Arrays.sort(answer);
+		return answer;
+		/**/
 	}
 }

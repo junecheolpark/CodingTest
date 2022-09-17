@@ -34,7 +34,6 @@ class Solution21 {
 		String s2;
 		
 		if (leng % 2 == 0) { // 짝수라면
-			//substr, substring, slice 차이 검색후 참고로 올리기 https://velog.io/@siugan/Javascript-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%9E%90%EB%A5%B4%EA%B8%B0-substr-substring-slice
 			s2 = s.substring(leng / 2 - 1, leng / 2 + 1); //  abcd 일경우 1,3-> 1=b부터 3전인 2=c까지 s에 정의해줌
 		} else {
 			s2 = s.substring(leng / 2, leng / 2 + 1); // abcde 일경우 2,3위치전까지 출력이므로 2=c만 s에 정의해줌
