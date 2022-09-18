@@ -14,7 +14,7 @@ public class a31_같은숫자는싫어 {
 class Solution31 {
 	public int[] solution(int[] arr) {
 		int[] answer = {};
-		ArrayList<Integer> arrList = new ArrayList<Integer>();
+		ArrayList<Integer> arrList = new ArrayList<>();
 
 		int num = -1; // 원소가 0~9까지 이므로 영향 안받는 아무 숫자.
 		for (int i = 0; i < arr.length; i++) {
