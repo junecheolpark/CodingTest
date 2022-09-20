@@ -31,7 +31,6 @@ class Solution30 {
 		int mt = n*m;
 		while(m != 0) {
 			int r = n % m;	// 나머지를 구해준다.
-	        
 			// GCD(a, b) = GCD(b, r)이므로 변환한다.
 			n = m;		
 			m = r;
