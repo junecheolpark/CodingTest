@@ -22,7 +22,7 @@ import java.util.Scanner;
 public class g01_손익분기점 {
 	public static void main(String[] args) {
 		
-		Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in) ;
 		
 		int N = in.nextInt();
 		
