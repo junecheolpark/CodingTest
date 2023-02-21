@@ -7,5 +7,8 @@ public class 필기 {
 		//제곱근 확인
 		//Math.sqrt(n)
 		//replaceAll("[str]","");
+		
+		// char값이 int형인지
+		//isDigit();
 	}
 }
