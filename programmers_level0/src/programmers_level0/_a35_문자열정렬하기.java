@@ -3,7 +3,7 @@ package programmers_level0;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class _a34_문자열정렬하기 {
+public class _a35_문자열정렬하기 {
 	public static void main(String[] arg) {
 		// int[] arr = { 1, 2, 3, 4, 5 };
 		// String str = "hello";
