@@ -1,7 +1,5 @@
 package programmers_level0;
 
-import java.util.*;
-
 public class _a40_최빈값구하기 {
 	public static void main(String[] arg) {
 		int[] arr3 = { 1 };
@@ -17,14 +15,11 @@ public class _a40_최빈값구하기 {
 	public static int solution(int[] array) {
 		int result = 0;
 		int arrayMax = 0;
-		
 		for (int i = 0; i < array.length; i++) { // 매개변수로 들어온 배열의 최대값을 구함
 			if (array[i] > arrayMax) {
 				arrayMax = array[i];
 			}
 		}
-
-		System.out.println(arrayMax);
 		int[] count = new int[arrayMax + 1]; // 크기가 최대값+1 인 배열을 하나 생성
 
 		for (int j = 0; j < array.length; j++) { // 매개변수 배열에 들어있는 정수번째마다
