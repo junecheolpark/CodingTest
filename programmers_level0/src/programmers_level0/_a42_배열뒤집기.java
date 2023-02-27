@@ -9,7 +9,7 @@ public class _a42_배열뒤집기 {
 		// String str = "hello";
 		// String[] sarr = { "a", "b", "c" };
 		System.out.println(Arrays.toString(solution(arr2, "left")));
-		// System.out.println(Arrays.toString(solution(arr3, "right")));
+		System.out.println(Arrays.toString(solution(arr3, "right")));
 	}
 
 	public static int[] solution(int[] numbers, String direction) {
@@ -22,7 +22,6 @@ public class _a42_배열뒤집기 {
 				} else {
 					answer[i] = numbers[i - 1];
 				}
-
 			}
 		} else if (direction.equals("left")) {
 			for (int i = 0; i < len; i++) {
@@ -34,6 +33,5 @@ public class _a42_배열뒤집기 {
 			}
 		}
 		return (answer);
-
 	}
 }
