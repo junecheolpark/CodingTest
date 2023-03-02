@@ -24,7 +24,7 @@ public class _a45_약수구하기 {
 				}
 			}
 		}
-		arr.sort(Comparator.naturalOrder());
+		Collections.sort(arr);
 		int[] answer = new int[arr.size()];
 		for (int i = 0; i < arr.size(); i++) {
 			answer[i] = arr.get(i);
