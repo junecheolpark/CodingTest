@@ -21,5 +21,8 @@ public class 필기 {
 		// 제곱근 구하기
 		// int num = (int) Math.sqrt(9); -> 3
 		
+		// arr에 java가 포함되어있는지 확인
+		//  arr.contains("java")))
+		
 	}
 }
