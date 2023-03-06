@@ -2,10 +2,10 @@ package programmers_level0;
 
 import java.util.Arrays;
 
-public class _a52_a로b만들기 {
+public class _a55_가까운수 {
 	public static void main(String[] arg) {
 		// int[] arr2 = { 4, 455, 6, 4, -1, 45, 6 };
-		//int[] arr3 = { 1, 2, 3, 4, 5, 6, 7, 8 };
+		// int[] arr3 = { 1, 2, 3 };
 		// String str = "hello";
 		// String[] sarr = { "a", "b", "c" };
 		System.out.println((solution("olleh", "hello")));
@@ -13,12 +13,12 @@ public class _a52_a로b만들기 {
 	}
 
 	public static int solution(String before, String after) {
-	       String[] b_arr = before.split("");
-			String[] a_arr = after.split("");
-			Arrays.sort(b_arr);
-			Arrays.sort(a_arr);
+		char[] b_ch = before.toCharArray();
+		char[] a_ch = after.toCharArray();
 
+		Arrays.sort(b_ch);
+		Arrays.sort(a_ch);
 
-			return String.join("", b_arr).equals(String.join("", a_arr)) ? 1 : 0;
-	    }
+		return new String(b_ch).equals(new String(a_ch)) ? 1 : 0;
 	}
+}
