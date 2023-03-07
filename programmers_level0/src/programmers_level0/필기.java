@@ -24,5 +24,8 @@ public class 필기 {
 		// arr에 java가 포함되어있는지 확인
 		//  arr.contains("java")))
 		
+		// 배열 a = 배열 b 이렇게 할경우 값이 같이 변경 됨으로 깊은 배열 복사를 해야함
+		// int[] a = b.clone()
+		
 	}
 }
