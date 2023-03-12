@@ -2,6 +2,10 @@ package programmers_level0;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class _a60_소인수분해 {
 	public static void main(String[] arg) {
@@ -18,14 +22,13 @@ public class _a60_소인수분해 {
 	}
 
 	public static int[] solution(int n) {
-		int[] answer = {};
 		int leth = n / 2, cnt = 2, sum = 1, num = n;
-		ArrayList<Integer> list = new ArrayList<>();
+		Set <Integer> set = new HashSet<Integer>();
 		while (true) {
-			if (num % cnt == 0) {
-				sum *= cnt;
-				num /= cnt;
-				list.add(cnt);
+			if (num % cnt == 0) { // cnt를 나눈 num값의 나머지가 0이면
+				sum *= cnt; // sum 값이 n값과 같아질떄까지
+				num /= cnt; // 
+				set.add(cnt); // set을 이용한 중복된 값은 제거
 				cnt = 1;
 			}
 			if (sum == n) {
@@ -33,8 +36,11 @@ public class _a60_소인수분해 {
 			}
 			cnt++;
 		}
+		List<Integer> list = new ArrayList<Integer>(set); // list에담아줘 정렬
+		Collections.sort(list);
+		int[] answer = new int[list.size()]; // 배열에 넣어줘 리턴
 		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i));
+			answer[i] = list.get(i);
 		}
 		return answer;
 	}
