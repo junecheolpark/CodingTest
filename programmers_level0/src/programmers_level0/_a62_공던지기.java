@@ -20,7 +20,7 @@ public class _a62_공던지기 {
 		for (int i = 0; i < k - 1; i++) {
 			cnt += 2;
 		}
-		while (cnt > leth) {
+		while (cnt > leth-1) {
 			cnt -= leth;
 		}
 		return numbers[cnt];
