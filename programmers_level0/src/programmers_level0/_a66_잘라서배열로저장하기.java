@@ -31,7 +31,6 @@ public class _a66_잘라서배열로저장하기 {
 			answer.add(my_str.substring((my_str.length() / n) * n));
 		}
 		return answer.toArray(new String[0]);
-
 		/**/
 	}
 }
