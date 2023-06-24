@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class 최소공약수와배수 {
 	public static void main(String[] args) {
 
-		int num1 = 2;
+		int num1 = 4;
 		int num2 = 3;
 
 		int gcd = getGCD(num1, num2);
