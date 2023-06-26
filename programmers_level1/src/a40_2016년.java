@@ -13,12 +13,8 @@ public class a40_2016년 {
 class Solution40 {
 
 	public String solution(int a, int b) {
-		String answer = "";
-		 LocalDate date = LocalDate.of(2023, 6, 26); // 날짜 설정 (연도, 월, 일)
-
-	        DayOfWeek dayOfWeek = date.getDayOfWeek();
-	        
-	        System.out.println("2016년 7월 1일은 " + dayOfWeek.toString().substring(0,3) + "요일입니다.");
-		return answer;
+		LocalDate date = LocalDate.of(2016, a, b); // 날짜 설정 (연도, 월, 일)
+		DayOfWeek dayOfWeek = date.getDayOfWeek();
+		return dayOfWeek.toString().substring(0, 3);
 	}
 }
