@@ -1,7 +1,7 @@
 
 //https://school.programmers.co.kr/learn/courses/30/lessons/147355?language=java
 
-public class a42_비밀지도 {
+public class a42_크기가작은부분문자열 {
 	public static void main(String[] arg) {
 		System.out.println(solution("3141592", "271"));
 		System.out.println(solution("500220839878", "7"));
