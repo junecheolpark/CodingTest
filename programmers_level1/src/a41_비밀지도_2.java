@@ -24,6 +24,7 @@ public class a41_비밀지도_2 {
 			answer[i] = binaryString;
 		}
 
+		
 		return answer;
 	}
 }
