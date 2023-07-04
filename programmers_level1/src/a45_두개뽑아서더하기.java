@@ -17,17 +17,18 @@ public class a45_두개뽑아서더하기 {
 		HashSet<Integer> set = new HashSet<>();
 		Arrays.sort(numbers);
 		for (int i = 0; i < numbers.length; i++) {
-			for (int j = i; j < numbers.length - 1; j++) {
-//				System.out.print(j + " : " + (numbers[j] + numbers[j + 1]) + ", ");
+			for (int j = i; j < numbers.length - 1; j++) { // 버블 정렬을 통해 값을 set에 담아줌
 				set.add(numbers[i] + numbers[j + 1]);
 			}
-//			System.out.println();
 		}
+		// size값만큼 선언 하여 담아줌
 		int[] answer = new int[set.size()];
 		int index = 0;
 		for (int num : set) {
 			answer[index++] = num;
 		}
+		// 오름차순 정렬
+		Arrays.sort(answer);
 		return answer;
 	}
 }
