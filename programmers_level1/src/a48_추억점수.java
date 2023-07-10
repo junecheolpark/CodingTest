@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-//https://school.programmers.co.kr/learn/courses/30/lessons/134240
+//https://school.programmers.co.kr/learn/courses/30/lessons/176963
 
 public class a48_추억점수 {
 	public static void main(String[] arg) {
@@ -24,7 +24,7 @@ public class a48_추억점수 {
 
 		for (int i = 0; i < photo.length; i++) {
 			int num = 0;
-			for (int j = 0; j < photo[i].length; j++) {
+			for (int j = 0; j < photo[i].length; j++) { // 배열안에 문자열이 map ket값에 존재한다면 해당키의 value값 num에 더함
 				if (map.containsKey(photo[i][j])) {
 					num += map.get(photo[i][j]);
 				}
