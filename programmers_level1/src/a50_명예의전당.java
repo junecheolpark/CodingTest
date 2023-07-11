@@ -18,6 +18,7 @@ public class a50_명예의전당 {
 		int mNum = 0;
 
 		for (int i = 0; i < score.length; i++) {
+			
 			if (i < k) { // k수 전에는 전부 배열등록
 				kArr[i] = score[i];
 				for (int j = i; j > 0; j--) { // j-1배열과 비교해 작으면 바꿈
