@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 //https://school.programmers.co.kr/learn/courses/30/lessons/12977
 
 public class a54_소수만들기 {
