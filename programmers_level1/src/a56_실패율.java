@@ -33,6 +33,19 @@ public class a56_실패율 {
 		}
 
 		// 실패율에 따라 스테이지 정렬
+		// 람다식
+
+		Integer[] stageIndices = new Integer[N];
+		for (int i = 0; i < N; i++) {
+			stageIndices[i] = i;
+		}
+		Arrays.sort(stageIndices, Comparator.comparingDouble(i -> -ratio[i]));
+
+		for (int i = 0; i < N; i++) {
+			answer[i] = stageIndices[i] + 1;
+		}
+		
+		/*
 		int Num = 0;
 		float fNum = 0;
 		for (int i = 0; i < N; i++) {
@@ -48,15 +61,7 @@ public class a56_실패율 {
 				}
 			}
 		}
-
-		// 람다식
-		/*
-		 * Integer[] stageIndices = new Integer[N]; for (int i = 0; i < N; i++) {
-		 * stageIndices[i] = i; } Arrays.sort(stageIndices, Comparator.comparingDouble(i
-		 * -> -ratio[i]));
-		 * 
-		 * for (int i = 0; i < N; i++) { answer[i] = stageIndices[i] + 1; }
-		 */
+		*/
 
 		return answer;
 	}
