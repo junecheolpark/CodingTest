@@ -1,25 +1,25 @@
 package programmers_level2;
 
-//https://school.programmers.co.kr/learn/courses/30/lessons/12939
+import java.util.Arrays;
+
+//https://school.programmers.co.kr/learn/courses/30/lessons/12941
 
 public class a00_최대값과최소값 {
 	public static void main(String[] args) {
-		System.out.println(solution("1 2 3 4"));
+		int[] arr = { 1, 4, 2 };
+		int[] arr2 = { 5, 4, 4 };
+		System.out.println(solution(arr, arr2));
 	}
 
-	public static String solution(String s) {
-		String[] arr = s.split(" ");
-		int num = 0;
-		int min = Integer.valueOf(arr[0]);
-		int max = min;
-
-		for (int i = 1; i < arr.length; i++) {
-			num = Integer.valueOf(arr[i]);
-			min = Math.min(min, num);
-            max = Math.max(max, num);
+	public static int solution(int[] A, int[] B) {
+		int answer = 0;
+		int length = A.length - 1;
+		Arrays.sort(A);
+		Arrays.sort(B);
+		for (int i = 0; i <= length; i++) {
+			answer += (A[i] * B[length - i]);
 		}
-
-		return min + " " + max;
+		return answer;
 	}
 
 }
