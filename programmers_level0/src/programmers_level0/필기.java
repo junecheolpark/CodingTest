@@ -27,5 +27,12 @@ public class 필기 {
 		// 배열 a = 배열 b 이렇게 할경우 값이 같이 변경 됨으로 깊은 배열 복사를 해야함
 		// int[] a = b.clone()
 		
+		// 정수의 2진수 1의 개수를 구함
+		//  Integer.bitCount(compare)
+		
+		// 정수를 2진수로 변환
+		// Integer.toBinaryString(n);
+
+		
 	}
 }
