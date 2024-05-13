@@ -2,7 +2,7 @@ package programmers_level2;
 
 import java.util.Arrays;
 
-//https://school.programmers.co.kr/learn/courses/30/lessons/12973
+//https://school.programmers.co.kr/learn/courses/30/lessons/12953
 public class a08_N개의최소공배수 {
 	public static void main(String[] args) {
 		int[] arr = {2, 6, 8, 14};
@@ -31,3 +31,4 @@ public class a08_N개의최소공배수 {
     }
 
 }
+
