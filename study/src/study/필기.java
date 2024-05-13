@@ -1,4 +1,4 @@
-package programmers_level0;
+package study;
 
 public class ÇÊ±â {
 	public static void main(String[] arg) {
