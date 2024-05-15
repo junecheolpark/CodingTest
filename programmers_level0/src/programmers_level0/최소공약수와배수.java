@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class 최소공약수와배수 {
 	public static void main(String[] args) {
 
-		int num1 = 4;
-		int num2 = 3;
+		int num1 = 24;
+		int num2 = 14;
 
 		int gcd = getGCD(num1, num2);
 		System.out.println("최대공약수 : " + gcd);
