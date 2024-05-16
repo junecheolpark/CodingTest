@@ -14,7 +14,7 @@ public class a30_최대공약수와최소공배수 {
 
 // 3 12
 class Solution30 {
-	public int[] solution(int n, int m) {
+	public int[] solution1(int n, int m) {
 
 		int[] answer = new int[2];
 		// 최대 공약수 (n과m의 약수를 구하고 공통된 약수중에서 큰수 저장하는 방식)
@@ -36,6 +36,26 @@ class Solution30 {
 			m = r;
 		}
 		answer[1] = mt / n;
+		return answer;
+	}
+	
+	// 이전방식 수정 버전
+	public int[] solution(int n, int m) {
+
+		int[] answer = new int[2];
+		int a = n;
+		int b = m;
+
+		// 공약수 매서드 (gcd);
+		while (b != 0) {
+			int temp = b;
+			b = a % b;
+			a = temp;
+		}
+
+		answer[0] = a;
+		// 최소 공배수 (lcm) 
+		answer[1] = (n * m) / a;
 		return answer;
 	}
 }

@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Comparator;
-
 //https://school.programmers.co.kr/learn/courses/30/lessons/161989
 
 public class a57_機張馬奄 {
@@ -8,7 +5,6 @@ public class a57_機張馬奄 {
 		int[] arr = { 2, 3, 6 };
 		int[] arr2 = { 1, 3 };
 		int[] arr3 = { 1, 2, 3, 4 };
-//		int[] answer = solution(5, arr);
 		System.out.println(solution(8, 4, arr));
 		System.out.println(solution(5, 4, arr2));
 		System.out.println(solution(4, 1, arr3));

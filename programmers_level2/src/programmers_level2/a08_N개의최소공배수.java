@@ -9,7 +9,7 @@ public class a08_N개의최소공배수 {
         System.out.println(solution(arr)); // 출력: 168
 	}
 
-	 // 최대공약수 계산 메서드
+	// 최대공약수 계산 메서드
     public static int gcd(int a, int b) {
         while (b != 0) {
             int temp = b;
@@ -19,13 +19,14 @@ public class a08_N개의최소공배수 {
         return a;
     }
 
-    // 최소공배수 계산 메서드
-    public static int lcm(int a, int b) {
-        return a * (b / gcd(a, b));
-    }
-
+	// 최소공배수 계산 메서드
+	public static int lcm(int a, int b) {
+//      return a * (b / gcd(a, b));
+		return (a * b) / gcd(a, b);
+	}
     
     // 배열의 모든 수의 최소공배수 계산 메서드
+<<<<<<< HEAD
     public static int solution(int[] arr) {
     	/**
     	int answer = arr[0];
@@ -35,6 +36,17 @@ public class a08_N개의최소공배수 {
         */
         return Arrays.stream(arr).reduce(1, (a, b) -> lcm(a, b));
     }
+=======
+	public static int solution(int[] arr) {
+		int answer = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			answer = lcm(answer, arr[i]);
+		}
+		return answer;
+		// 더 간결하고 가독성이 좋음
+		// return Arrays.stream(arr).reduce(1, (a, b) -> lcm(a, b));
+	}
+>>>>>>> 2416227246cfddbbb4596df5708a7b122e4a18e4
 
 }
 
