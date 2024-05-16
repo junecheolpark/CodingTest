@@ -27,6 +27,12 @@ public class a08_N개의최소공배수 {
     
     // 배열의 모든 수의 최소공배수 계산 메서드
     public static int solution(int[] arr) {
+    	/**
+    	int answer = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            answer = lcm(answer, arr[i]);
+        }
+        */
         return Arrays.stream(arr).reduce(1, (a, b) -> lcm(a, b));
     }
 
