@@ -12,7 +12,8 @@ public class _a68_배열만들기1 {
 	public static int[] solution(int n, int k) {
 		int size = n / k;
 		int[] arr = new int[size];
-		for (int i = 0; k * i <= n; i++) {
+		
+		for (int i = 0; i < size; i++) {
 			arr[i] = k * (i + 1);
 		}
 		
