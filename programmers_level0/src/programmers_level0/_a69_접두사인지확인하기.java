@@ -1,8 +1,6 @@
 package programmers_level0;
 
-import java.util.Arrays;
-
-//https://school.programmers.co.kr/learn/courses/30/lessons/181901?language=java
+// https://school.programmers.co.kr/learn/courses/30/lessons/181906
 
 public class _a69_접두사인지확인하기 {
 	public static void main(String[] arg) {
