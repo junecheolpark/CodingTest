@@ -1,6 +1,6 @@
 package programmers_level0;
 
-// https://school.programmers.co.kr/learn/courses/30/lessons/181906
+// https://school.programmers.co.kr/learn/courses/30/lessons/181911
 
 public class _a70_부분문자열이어붙여문자열만들기 {
 	public static void main(String[] arg) {
