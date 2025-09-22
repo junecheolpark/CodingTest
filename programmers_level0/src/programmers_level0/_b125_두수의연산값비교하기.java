@@ -11,7 +11,9 @@ public class _b125_두수의연산값비교하기 {
 
 	// 방법1
 	public static int solution(int a, int b) {
-		return (a+b) 
+		int sum = Integer.parseInt("" + a + b);
+        int multi = 2 * a * b;
+        return sum >= multi ? sum : multi;
 	}
 
 }
