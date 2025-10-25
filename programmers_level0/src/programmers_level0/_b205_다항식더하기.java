@@ -1,16 +1,12 @@
 package programmers_level0;
 
-import java.util.Arrays;
-
 /*
- * https://school.programmers.co.kr/learn/courses/30/lessons/181893
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120863
  * */
 
 public class _b205_다항식더하기 {
 	public static void main(String[] arg) {
-		int[] arr = { 0, 1, 2, 3, 4, 5 };
-		int[] arr2 = { 4, 1, 2 };
-		System.out.println(Arrays.toString(solution("3x + 7 + x")));
+		System.out.println((solution("3x + 7 + x")));
 
 	}
 
